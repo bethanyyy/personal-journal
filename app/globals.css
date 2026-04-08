@@ -1,6 +1,44 @@
 @import "tailwindcss";
 
-:root {
+@theme inline {
+  --font-serif: var(--font-cormorant-garamond);
+  --font-sans: var(--font-poppins);
+}
+
+body {
+  @apply bg-neutral-100 h-screen flex items-center;
+}
+
+.article {
+  @apply flex flex-col gap-3 font-sans text-lg tracking-wide mb-20;
+}
+
+.article > h1 {
+  /* text-align: center; */
+  @apply font-serif text-4xl text-center tracking-tight;
+}
+
+.article > h2 {
+  @apply font-serif text-3xl tracking-tight;
+}
+
+.article > ol {
+  @apply list-decimal flex flex-col mx-10 gap-2;
+}
+
+.article > ul {
+  @apply list-disc flex flex-col mx-10 gap-2;
+}
+
+.article > pre {
+  @apply bg-neutral-950 text-neutral-50 p-5 overflow-scroll;
+}
+
+.article > blockquote {
+  @apply pl-5 italic border-l-2 border-neutral-600/40;
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +61,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
