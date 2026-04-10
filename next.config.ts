@@ -4,8 +4,8 @@ import cloudflareLoader from "./image-loader";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    loader: "custom",
-    loaderFile: "./image-loader.ts",
+    // loader: "custom",
+    // loaderFile: "./image-loader.ts",
     remotePatterns: [
       {
         protocol: "https",
