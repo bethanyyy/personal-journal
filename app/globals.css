@@ -5,12 +5,8 @@
   --font-sans: var(--font-poppins);
 }
 
-body {
-  @apply bg-neutral-100 h-screen flex items-center;
-}
-
 .article {
-  @apply flex flex-col gap-3 font-sans text-lg tracking-wide mb-20;
+  @apply flex flex-col gap-1 font-serif text-lg tracking-wide;
 }
 
 .article > h1 {

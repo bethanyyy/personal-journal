@@ -13,13 +13,15 @@ export const getSortedArticles = (): ArticleItem[] => {
   const fileNames = fs.readdirSync(articlesDirectory); // returns list of file names
 
   const allArticlesData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, ""); // replace markdown extension
+    // const id = fileName.replace(/\.md$/, ""); // replace markdown extension
 
     const fullPath = path.join(articlesDirectory, fileName);
 
     const fileContents = fs.readFileSync(fullPath, "utf-8");
 
     const matterResult = matter(fileContents); // process metadata
+
+    const id = matterResult.data.date;
 
     return {
       id,
@@ -34,9 +36,9 @@ export const getSortedArticles = (): ArticleItem[] => {
     const dateOne = moment(a.date, format);
     const dateTwo = moment(b.date, format);
     if (dateOne.isBefore(dateTwo)) {
-      return -1;
-    } else if (dateOne.isAfter(dateTwo)) {
       return 1;
+    } else if (dateOne.isAfter(dateTwo)) {
+      return -1;
     } else {
       return 0;
     }
@@ -63,6 +65,8 @@ export const getArticleData = async (id: string) => {
   const fileContents = fs.readFileSync(fullPath, "utf-8");
 
   const matterResult = matter(fileContents);
+
+  console.log(matterResult);
 
   const processedContent = await remark()
     .use(html)

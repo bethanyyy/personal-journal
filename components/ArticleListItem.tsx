@@ -31,7 +31,7 @@ interface Props {
 
 const ArticleItemList = ({ articles }: Props) => {
   return (
-    <div className="flex flex-col gap-2.5 font-sans text-lg">
+    <div className="flex flex-col gap-2.5 font-sans text-base">
       {articles.map((article, id) => (
         <Link
           href={`/${article.id}`}
