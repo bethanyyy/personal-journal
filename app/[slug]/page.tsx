@@ -53,3 +53,4 @@ export default Article;
 
 // pre-computes exactly which slugs exist at build time
 export const dynamicParams = false;
+export const revalidate = 60;
