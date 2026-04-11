@@ -5,6 +5,10 @@
   --font-sans: var(--font-poppins);
 }
 
+body {
+  @apply bg-neutral-100;
+}
+
 .article {
   @apply flex flex-col gap-1 font-serif text-lg tracking-wide;
 }

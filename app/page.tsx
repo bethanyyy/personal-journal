@@ -1,15 +1,13 @@
 import ArticleItemList from "@/components/ArticleListItem";
-import { getCategorisedArticles, getSortedArticles } from "@/lib/articles";
+import { getSortedArticles } from "@/lib/articles";
 import React from "react";
 
-const HomePage = () => {
+const HomePage = async () => {
   // const articles = getCategorisedArticles();
-  const articles = getSortedArticles();
-
-  console.log(articles);
+  const articles = await getSortedArticles();
 
   return (
-    <div className="bg-neutral-100 h-screen flex items-center">
+    <div className="h-screen flex items-center">
       <section className="mx-auto w-11/12 md:w-1/2 mt-20 flex flex-col gap-20 mb-20">
         <header className="font-serif font-light text-6xl text-neutral-900 text-center">
           <h1>life dump</h1>

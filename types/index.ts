@@ -1,6 +1,12 @@
 export type ArticleItem = {
   id: string;
-  title: string;
   date: string;
-  category: string;
+  tags: string[];
+  thumbnail: string | null;
+};
+
+export type JournalImage = {
+  key: string;
+  url: string;
+  size?: number;
 };
