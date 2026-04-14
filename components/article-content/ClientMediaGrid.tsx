@@ -33,7 +33,7 @@ export default function ClientMediaGrid({ slug }: { slug: string }) {
   if (media.length === 0) return null;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-2 mb-2">
       {media.map((item, index) => (
         <div key={item.key} className="relative aspect-square">
           {item.type === "video" ? (
