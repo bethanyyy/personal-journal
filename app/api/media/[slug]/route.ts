@@ -13,7 +13,7 @@ const r2Client = new S3Client({
 
 export async function GET(
   request: Request,
-  { params }: { params: { slug: string } },
+  { params }: { params: Promise<{ slug: string }> },
 ) {
   const param = await params;
   const slug = await param.slug;
