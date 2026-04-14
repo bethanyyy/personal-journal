@@ -10,3 +10,11 @@ export type JournalImage = {
   url: string;
   size?: number;
 };
+
+export type MediaItem = {
+  key: string;
+  url: string;
+  type: string;
+  size?: number;
+  thumbnail?: string; // For video thumbnails
+};

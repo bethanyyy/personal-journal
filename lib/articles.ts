@@ -6,7 +6,7 @@ import { remark } from "remark";
 import html from "remark-html";
 
 import type { ArticleItem } from "@/types";
-import { getFirstImageForDate } from "./images";
+import { getFirstImageForDate } from "./media";
 
 const articlesDirectory = path.join(process.cwd(), "articles");
 
