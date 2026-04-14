@@ -8,7 +8,7 @@ const HomePage = async () => {
 
   return (
     <div className="h-screen flex items-center">
-      <section className="mx-auto w-11/12 md:w-1/2 mt-20 flex flex-col gap-20 mb-20">
+      <section className="mx-auto w-10/12 sm:w-3/4 md:w-1/2 mt-20 flex flex-col gap-20 mb-20">
         <header className="font-serif font-light text-6xl text-neutral-900 text-center">
           <h1>life dump</h1>
         </header>
